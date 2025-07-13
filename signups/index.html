@@ -15,9 +15,49 @@
     input[type="email"] { padding: 8px; font-size: 1em; width: 300px; max-width: 100%; margin-right: 10px; }
     button { padding: 8px 16px; font-size: 1em; cursor: pointer; }
     #message { margin-top: 20px; font-weight: bold; }
+    #m1 {
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      width: 80%;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      /* Drop shadow for text: no offset, slight blur, dark with 80% opacity */
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+    }
+
+    #m1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('logopic.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      opacity: 0.3;
+      z-index: -1;
+    }
   </style>
 </head>
 <body>
+
+<p id = 'm1'>Are you interested in visiting or permanently living in thailand? If you're ready to enjoy great food,
+  great locations, and have endless fun things to all at an excellent price, then this is the destination for you!
+
+  Regardless of how long you want to stay we have compiled all the resources you might need
+  including visa guides, activities, long term staying, and more in our app that is releasing soon!
+
+  <br>
+  <br>
+  After living abroad in thailand for years, we want to share our passion and knowledge with you.
+  If you're interested then simply sign up today and we will email you when it is out.
+  It contains everything from A-Z and it is completely free!
+
+</p>
   <h1>Signups</h1>
   <form id="signup-form">
     <label for="email-input">Enter your email:</label>
