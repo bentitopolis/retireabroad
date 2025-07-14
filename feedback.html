@@ -3,22 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ReThaiRe</title>
+  <title>Feedback - ReThaiRe</title>
   <!-- Materialize CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <!-- Theme Color -->
   <meta name="theme-color" content="#2196f3">
-  <!-- Custom Styles -->
-  <style>
-    body {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
-    main {
-      flex: 1 0 auto;
-    }
-  </style>
 </head>
 <body>
   <nav>
@@ -28,19 +17,23 @@
   </nav>
   <main>
     <div class="container center-align">
-      <h4>Welcome to ReThaiRe</h4>
-      <div class="section">
-        <img src="logopic.png" alt="ReThaiRe Logo" class="responsive-img" style="max-width: 200px;">
-      </div>
-      <div class="section">
-        <a href="https://testflight.apple.com/join/9CHKu5bT" class="waves-effect waves-light btn-large blue">Download the App</a>
-      </div>
-      <div class="section">
-        <a href="/feedback.html">Like or dislike the app? Give us feedback here</a>
-      </div>
-      <div class="section">
-        <a href="/tos.html">Terms of Service</a> |
-        <a href="/privacy_policy.html">Privacy Policy</a>
+      <h4>Feedback</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="feedback" class="materialize-textarea"></textarea>
+              <label for="feedback">Your Feedback</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light blue" type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </main>
