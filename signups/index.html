@@ -40,8 +40,15 @@
       z-index: -1;
     }
   </style>
+    <link rel="stylesheet" href="../nav.css">
 </head>
 <body>
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-home" href="../index.html">← Home</a>
+    </div>
+  </nav>
+
 
 <p id = 'm1'>Are you interested in visiting or permanently living in Thailand?
   If you're ready to enjoy great food, amazing locations, and endless fun activities,
@@ -68,7 +75,6 @@ After living abroad in Thailand for years, we want to share our passion and know
     <button type="submit">Enter</button>
   </form>
   <div id="message"></div>
-  <p><a href="/">Back to Home</a></p>
   <script>
     document.getElementById('signup-form').addEventListener('submit', async function(e) {
       e.preventDefault();
