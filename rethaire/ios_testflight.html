@@ -7,7 +7,20 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../nav.css">
   <style>
-    body { padding-bottom: 40px; }
+    /* Use same background as homepage */
+    body {
+      background: url('/backgroundimage.jpeg') no-repeat center center fixed;
+      background: image-set(
+        url('/backgroundimage.webp') type('image/webp'),
+        url('/backgroundimage.jpeg') type('image/jpeg')
+      ) no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      padding-bottom: 40px;
+    }
+    main { flex: 1 0 auto; }
     .step { text-align: left; max-width: 720px; margin: 18px auto; }
     .step h5 { margin-top: 0; }
     .center-actions { text-align: center; margin-top: 24px; }
@@ -28,11 +41,12 @@
 
       <div class="card step">
         <div class="card-content">
-          <h5>Step 1 — Install TestFlight</h5>
+          <h5>1) Install TestFlight</h5>
           <p>Open the App Store on your device and install Apple's <strong>TestFlight</strong> app if you don't already have it.</p>
           <p style="margin-top:12px;">When you're on your iOS device, first install TestFlight from the App Store (if needed), then tap the invitation button below to open TestFlight:</p>
-          <p>
-            <a class="waves-effect waves-light btn" href="https://apps.apple.com/us/app/testflight/id899247664?mt=8" target="_blank" rel="noopener">Get TestFlight on the App Store</a>
+          <br>
+          <p class="center">
+            <a class="waves-effect waves-light btn-large blue" href="https://apps.apple.com/us/app/testflight/id899247664?mt=8" target="_blank" rel="noopener">Get TestFlight on the App Store</a>
           </p>
 
         </div>
@@ -40,16 +54,16 @@
 
       <div class="card step">
         <div class="card-content">
-          <h5>Step 2 — IMPORTANT</h5>
+          <h5>2) IMPORTANT</h5>
           <p>Ignore TestFlight's request to send your email to the developer to invite for internal testing. You do not need to do this (if you do, you will need to wait for our invitation link which will take time for us to send it to you). Once you have TestFlight, you can directly proceed to downloading the app (Step 3). Enjoy!</p>
         </div>
       </div>
 
       <div class="card step">
         <div class="card-content">
-          <h5>Step 3 — Install the app!</h5>
+          <h5>3) Install the app!</h5>
           <p>We hope you enjoy and leave feedback!</p>
-          <p style="margin-top:12px;">
+          <p class="center" style="margin-top:12px;">
             <a class="waves-effect waves-light btn-large blue" href="itms-beta://testflight.apple.com/join/4M4bxy3Y">Download ReThaiRe!</a>
           </p>
         </div>
@@ -58,15 +72,6 @@
 
     </div>
   </main>
-  <footer class="page-footer grey lighten-4">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m6">
-          <p>Retire Abroad LLC</p>
-        </div>
-      </div>
-    </div>
-  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
