@@ -1,94 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Feedback - ReThaiRe</title>
-  <!-- Materialize CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback — ReThaiRe</title>
+
+  <!-- Materialize -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <!-- Theme Color -->
-  <meta name="theme-color" content="#2196f3">
-    <link rel="stylesheet" href="nav.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      flex-direction: column;
+      min-height: 100svh;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    :root {
+      --cta: #f1a247;
+    }
+
+    .feedback-hero {
+      background: #fff;
+      padding: 24px 0 8px;
+      text-align: center;
+    }
+
+    .feedback-hero h4 {
+      margin: 0.3rem 0 0.2rem;
+      font-weight: 900;
+      letter-spacing: .01em;
+    }
+
+    .feedback-wrap {
+      max-width: 100%;
+      margin: 24px auto 0;
+      padding: 0 16px;
+    }
+
+    .card-feedback {
+      border-radius: 12px;
+      padding: 20px 20px 8px;
+      background: #fff;
+    }
+
+    .btn-cta {
+      background: var(--cta) !important;
+      border-radius: 8px;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    .btn-cta:hover {
+      filter: brightness(.95);
+    }
+
+    .helper {
+      font-size: .9rem;
+      color: #5b6b75;
+      margin-top: 20px;
+    }
+
+    .progress {
+      margin: 10px 0 0;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .title {
+      color: #2f7c7f;
+      font-weight: 900;
+      letter-spacing: .02em;
+      display: flex;
+      justify-content: center;
+    }
+
+    .input-field input:focus+label,
+    .input-field textarea:focus+label {
+      color: #157f83 !important;
+    }
+
+    .input-field input:focus,
+    .input-field textarea:focus {
+      border-bottom: 1px solid #157f83 !important;
+      box-shadow: 0 1px 0 0 #157f83 !important;
+    }
+  </style>
 </head>
+
 <body>
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a class="nav-home" href="index.html">← Home</a>
+
+  <!-- HEADER  -->
+  <nav class="nav-hero">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html#home" class="brand-logo brand-text">Retire Abroad</a>
+
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Open menu">
+          <i class="material-icons">
+            <img class="icon-menu" src="assets/icons/menu.svg" alt="">
+          </i>
+        </a>
+
+        <ul class="nav-right">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#features" class="nav-link">Features</a></li>
+          <li><a href="about-us.html" class="nav-link">About us</a></li>
+          <li><a href="index.html#download" class="nav-link nav-download">Download</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <nav>
-    <div class="nav-wrapper blue">
-      <a href="#" class="brand-logo center">ReThaiRe</a>
+  <!-- sidenav mobile -->
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="about-us.html">About us</a></li>
+    <li><a href="index.html#download">Download</a></li>
+  </ul>
+
+  <!-- title -->
+  <section class="feedback-hero">
+
+  </section>
+
+  <!-- FORM -->
+  <main class="feedback-wrap">
+    <div class="container">
+      <h4 class="title">Feedback</h4>
     </div>
-  </nav>
-  <main>
-    <div class="container center-align">
-      <h4>Feedback</h4>
-      <div class="row">
-        <form id="feedback-form" class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea id="feedback" class="materialize-textarea"></textarea>
-              <label for="feedback">Your Feedback</label>
-            </div>
-          </div>
-          <button class="btn waves-effect waves-light blue" type="submit">Submit</button>
-        </form>
-      </div>
+    <div class="card-feedback">
+      <form id="feedback-form" class="feedback-form" novalidate>
+        <input type="text" name="company" id="company" autocomplete="off" style="position:absolute;left:-9999px;"
+          tabindex="-1" aria-hidden="true">
+
+        <div class="input-field">
+          <input id="email" name="email" type="email" class="validate" required aria-required="true"
+            autocomplete="email" />
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="Enter a valid email"></span>
+        </div>
+
+        <div class="input-field">
+          <textarea id="feedback" name="feedback" class="materialize-textarea" data-length="1200" required
+            aria-required="true" rows="6"></textarea>
+          <label for="feedback">Your Feedback</label>
+        </div>
+
+        <p class="helper">
+          By submitting you agree to our
+          <a href="privacy_policy.html" target="_blank" rel="noopener">Privacy Policy</a>.
+        </p>
+
+        <div class="center" style="margin-top:10px">
+          <button id="submit-btn" class="btn btn-cta waves-effect">Submit</button>
+        </div>
+
+        <div id="submit-progress" class="progress" style="display:none">
+          <div class="indeterminate"></div>
+        </div>
+      </form>
     </div>
   </main>
-  <footer class="page-footer grey lighten-4">
+
+  <!-- FOOTER  -->
+  <footer id="footer" class="footer-teal" style="margin-top:28px">
     <div class="container">
-      <div class="row">
+      <div class="row" style="margin-bottom:0">
         <div class="col s12 m6">
-          <h5 class="black-text">Retire Abroad LLC</h5>
-          <p class="black-text">
+          <h5>Retire Abroad LLC</h5>
+          <p>
             94 Downer Forest Rd<br>
             South Strafford, VT 05070<br>
             United States
           </p>
         </div>
         <div class="col s12 m6">
-          <h5 class="black-text">Contact</h5>
-          <p class="black-text">
-            Email: <a href="mailto:info@retireabroad.info">info@retireabroad.info</a>
-          </p>
+          <h5>Contact</h5>
+          <p>Email: <a href="mailto:info@retireabroad.info" class="mail-link">info@retireabroad.info</a></p>
         </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2025 <strong>Retire Abroad LLC</strong> · ReThaiRe is operated by Retire Abroad LLC.</p>
       </div>
     </div>
   </footer>
-  <!-- Materialize JS -->
+
+  <!-- Materialize + form -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var form = document.getElementById('feedback-form');
-      form.addEventListener('submit', async function(e) {
+    document.addEventListener('DOMContentLoaded', function () {
+      M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      M.CharacterCounter.init(document.querySelectorAll('#feedback'));
+
+      const form = document.getElementById('feedback-form');
+      const btn = document.getElementById('submit-btn');
+      const bar = document.getElementById('submit-progress');
+
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        var email = document.getElementById('email').value;
-        var feedback = document.getElementById('feedback').value;
+
+        if (!form.checkValidity()) {
+          M.toast({ html: 'Please fill in the required fields.' });
+          return;
+        }
+        // honeypot
+        if (document.getElementById('company').value) return;
+
+        btn.disabled = true;
+        bar.style.display = 'block';
+
+        const payload = {
+          key: '1',
+          email: document.getElementById('email').value.trim(),
+          message: document.getElementById('feedback').value.trim()
+        };
+
         try {
-          var response = await fetch('https://www.jwpro.info/retire-abroad-emails', {
+          const res = await fetch('https://www.jwpro.info/retire-abroad-emails', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ key: '1', email: email, message: feedback })
+            body: JSON.stringify(payload)
           });
-          if (response.ok) {
-            window.location.href = '/thank_you.html';
+
+          if (res.ok) {
+            M.toast({ html: 'Thanks for your feedback! 🙏' });
+            form.reset();
+            setTimeout(() => { window.location.href = 'thank_you.html'; }, 700);
           } else {
             M.toast({ html: 'Something went wrong. Please try again.' });
           }
-        } catch (error) {
+        } catch (err) {
           M.toast({ html: 'Network error. Please try again.' });
+        } finally {
+          btn.disabled = false;
+          bar.style.display = 'none';
         }
       });
     });
   </script>
 </body>
+
 </html>
