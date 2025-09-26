@@ -1,55 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You - ReThaiRe</title>
-  <!-- Materialize CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <!-- Theme Color -->
-  <meta name="theme-color" content="#2196f3">
-    <link rel="stylesheet" href="nav.css">
-</head>
-<body>
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a class="nav-home" href="index.html">← Home</a>
-    </div>
-  </nav>
 
-  <nav>
-    <div class="nav-wrapper blue">
-      <a href="#" class="brand-logo center">ReThaiRe</a>
-    </div>
-  </nav>
-  <main>
-    <div class="container center-align">
-      <h4>Thank You!</h4>
-      <p>Thank you for your feedback.</p>
-      <p><a href="/">Return to Home</a></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — ReThaiRe</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main.ty-main {
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0;
+    }
+
+    .ty-wrap {
+      max-width: 760px;
+      margin: 28px auto;
+      padding: 0 16px;
+    }
+
+    .ty-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 60px 80px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .10);
+      text-align: center;
+      display: inline-grid;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ty-icon {
+      font-size: 56px;
+      color: #157f83;
+      display: block;
+      margin: 4px auto 8px;
+    }
+
+    .ty-title {
+      margin: .4rem 0 .2rem;
+      font-weight: 900;
+      letter-spacing: .02em;
+      color: #20323b;
+    }
+
+    .ty-text {
+      margin: .2rem 0 .2rem;
+      color: #5b6b75;
+    }
+
+    .ty-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 14px;
+    }
+
+    .store-btn--outline {
+      background: #fff;
+      color: var(--brand, #157f83) !important;
+      border: 2px solid var(--brand, #157f83);
+      border-radius: 8px;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    @media (max-width: 992px) {
+      .ty-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="ty-main">
+    <div class="ty-wrap">
+      <div class="ty-card">
+        <i class="material-icons ty-icon" aria-hidden="true">check_circle</i>
+        <h4 class="ty-title">Thank you!</h4>
+        <p class="ty-text">Thank you for your feedback!.</p>
+
+        <div class="ty-actions">
+          <a href="index.html#home" class="store-btn">Back to Home</a>
+        </div>
+      </div>
     </div>
   </main>
-  <footer class="page-footer grey lighten-4">
+
+  <footer id="footer" class="footer-teal">
     <div class="container">
-      <div class="row">
+      <div class="row" style="margin-bottom:0">
         <div class="col s12 m6">
-          <h5 class="black-text">Retire Abroad LLC</h5>
-          <p class="black-text">
+          <h5>Retire Abroad LLC</h5>
+          <p>
             94 Downer Forest Rd<br>
             South Strafford, VT 05070<br>
             United States
           </p>
         </div>
         <div class="col s12 m6">
-          <h5 class="black-text">Contact</h5>
-          <p class="black-text">
-            Email: <a href="mailto:info@retireabroad.info">info@retireabroad.info</a>
-          </p>
+          <h5>Contact</h5>
+          <p>Email: <a href="mailto:info@retireabroad.info" class="mail-link">info@retireabroad.info</a></p>
         </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2025 <strong>Retire Abroad LLC</strong> · ReThaiRe is operated by Retire Abroad LLC.</p>
       </div>
     </div>
   </footer>
-  <!-- Materialize JS -->
+
+  <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.M) M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    });
+  </script>
 </body>
+
 </html>

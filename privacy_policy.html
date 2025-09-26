@@ -1,63 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Retire Abroad</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 20px; max-width: 800px; }
-        h1, h2 { color: #2c3e50; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
-    <link rel="stylesheet" href="nav.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Retire Abroad</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    .legal-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .legal-title {
+      margin: 0 0 .5rem;
+      color: #2f7c7f;
+      font-weight: 900;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      font-size: clamp(1.8rem, 1.2rem + 1.2vw, 2.4rem);
+    }
+
+    .infos-title {
+      font-size: clamp(1.4rem, 1rem + 1vw, 1.8rem);
+      color: var(--cta);
+      font-weight: 500;
+    }
+
+    .legal-updated {
+      margin: 0 0 1rem;
+      color: #5b6b75;
+    }
+
+    .legal-container p,
+    .legal-container li {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .legal-container ul {
+      list-style: disc !important;
+      padding-left: 1.25rem;
+      margin: 0 0 1rem;
+    }
+
+    .legal-container li {
+      list-style: inherit !important;
+      display: list-item;
+    }
+
+    .legal-container ol {
+      list-style: decimal !important;
+      padding-left: 1.25rem;
+      margin: 0 0 1rem;
+    }
+
+    .legal-container a {
+      color: #157f83;
+      text-decoration: underline;
+    }
+
+    .legal-container a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    .section.legal {
+      padding-top: clamp(20px, 4vw, 36px);
+    }
+  </style>
 </head>
+
 <body>
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a class="nav-home" href="index.html">← Home</a>
+
+  <nav class="nav-hero">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html#home" class="brand-logo brand-text">Retire Abroad</a>
+
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Open menu">
+          <i class="material-icons">
+            <img class="icon-menu" src="assets/icons/menu.svg" alt="">
+          </i>
+        </a>
+
+        <ul class="nav-right">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#features" class="nav-link">Features</a></li>
+          <li><a href="about-us.html" class="nav-link">About us</a></li>
+          <li><a href="index.html#download" class="nav-link nav-download">Download</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="about-us.html">About us</a></li>
+    <li><a href="index.html#download">Download</a></li>
+  </ul>
 
-    <h1>Privacy Policy</h1>
-    <p>Last updated: <strong>July 14, 2025</strong></p>
+  <section class="section legal">
+    <div class="container legal-container">
+      <h1 class="legal-title">Privacy Policy</h1>
+      <p class="legal-updated">Last updated: <strong>July 14, 2025</strong></p>
 
-    <p>Welcome to <strong>Retire Abroad</strong> (<a href="https://retireabroad.info">retireabroad.info</a>). Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information.</p>
+      <p>Welcome to <strong>Retire Abroad</strong> (<a href="https://retireabroad.info" target="_blank"
+          rel="noopener">retireabroad.info</a>). Your privacy is important to us. This Privacy Policy explains how we
+        collect, use, and protect your information.</p>
 
-    <h2>1. Information We Collect</h2>
-    <p>When you use our services, we may collect the following information:</p>
-    <ul>
-        <li>Your name and email address (if you sign in with Google OAuth or sign in with Apple), and profile picture if available (Google only).</li>
+      <h2 class="infos-title">1. Information We Collect</h2>
+      <p>When you use our services, we may collect the following information:</p>
+      <ul>
+        <li>Your name and email address (if you sign in with Google OAuth or sign in with Apple), and profile picture if
+          available (Google only). </li>
         <li>Usage data, such as interactions with our website.</li>
-    </ul>
+      </ul>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>We use the collected information to:</p>
-    <ul>
+      <h2 class="infos-title">2. How We Use Your Information</h2>
+      <p>We use the collected information to:</p>
+      <ul>
         <li>Provide and improve our services.</li>
         <li>Personalize your experience on our platform.</li>
         <li>Respond to inquiries and customer support requests.</li>
-    </ul>
+      </ul>
 
-    <h2>3. Data Sharing and Security</h2>
-    <p>We do <strong>not</strong> sell, trade, or rent your personal data. Your information is securely stored and protected using industry-standard security measures.</p>
+      <h2 class="infos-title">3. Data Sharing and Security</h2>
+      <p>We do <strong>not</strong> sell, trade, or rent your personal data. Your information is securely stored and
+        protected using industry-standard security measures.</p>
 
-    <h2>4. Third-Party Services</h2>
-    <p>We may use third-party services for authentication and other functionalities. These services have their own privacy policies:</p>
-    <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-        <li><a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple Privacy Policy</a></li>
-    </ul>
+      <h2 class="infos-title">4. Third-Party Services</h2>
+      <p>We may use third-party services for authentication and other functionalities. These services have their own
+        privacy policies:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank" rel="noopener">Apple Privacy Policy</a>
+        </li>
+      </ul>
 
-    <h2>5. Your Rights</h2>
-    <p>You can request access, correction, or deletion of your personal data by contacting us at <a href="mailto:privacy@retireabroad.info">privacy@retireabroad.info</a>.</p>
+      <h2 class="infos-title">5. Your Rights</h2>
+      <p>You can request access, correction, or deletion of your personal data by contacting us at <a
+          href="mailto:privacy@retireabroad.info">privacy@retireabroad.info</a>.</p>
 
-    <h2>6. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated revision date.</p>
+      <h2 class="infos-title">6. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated
+        revision date.</p>
 
-    <h2>7. Contact Us</h2>
-    <p>If you have any questions, please contact us at <a href="mailto:privacy@retireabroad.info">privacy@retireabroad.info</a>.</p>
+      <h2 class="infos-title">7. Contact Us</h2>
+      <p>If you have any questions, please contact us at <a
+          href="mailto:privacy@retireabroad.info">privacy@retireabroad.info</a>.</p>
+    </div>
+  </section>
 
+  <footer id="footer" class="footer-teal">
+    <div class="container">
+      <div class="row" style="margin-bottom:0">
+        <div class="col s12 m6">
+          <h5>Retire Abroad LLC</h5>
+          <p>
+            94 Downer Forest Rd<br>
+            South Strafford, VT 05070<br>
+            United States
+          </p>
+        </div>
+        <div class="col s12 m6">
+          <h5>Contact</h5>
+          <p>Email: <a href="mailto:info@retireabroad.info" class="mail-link">info@retireabroad.info</a></p>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2025 <strong>Retire Abroad LLC</strong> · ReThaiRe is operated by Retire Abroad LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.M) M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    });
+  </script>
 </body>
+
 </html>

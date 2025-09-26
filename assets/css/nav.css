@@ -1,0 +1,6 @@
+/* nav.css - shared navigation styles for Retire Abroad */
+.site-nav{background:#fff;border-bottom:1px solid #eee;font-family:inherit}
+.site-nav .nav-inner{max-width:900px;margin:0 auto;padding:12px 20px;display:flex;align-items:center}
+.site-nav a{color:#3498db;text-decoration:none;font-weight:600;font-size:0.95rem}
+.site-nav a:hover{text-decoration:underline}
+@media (max-width:600px){.site-nav .nav-inner{padding:10px 14px}.site-nav a{font-size:0.9rem}}

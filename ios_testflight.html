@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Download App for iOS — TestFlight Instructions</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <nav class="nav-hero">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html#home" class="brand-logo brand-text">Retire Abroad</a>
+
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Open menu">
+          <i class="material-icons">
+            <img class="icon-menu" src="assets/icons/menu.svg" alt="">
+          </i>
+        </a>
+
+        <ul class="nav-right">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#features" class="nav-link">Features</a></li>
+          <li><a href="about-us.html" class="nav-link">About us</a></li>
+          <li><a href="index.html#download" class="nav-link nav-download">Download</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="about-us.html">About us</a></li>
+    <li><a href="index.html#download">Download</a></li>
+  </ul>
+  <header class="hero hero--short">
+    <div class="hero__content">
+      <div class="container tf-hero">
+        <h1 class="tf-hero-title">Download ReThaiRe for iOS</h1>
+        <p class="tf-hero-sub">Follow these three quick steps on your iPhone or iPad.</p>
+      </div>
+    </div>
+  </header>
+  <section class="section">
+    <div class="container tf-steps">
+
+      <div id="deviceNote" class="tf-device-note">
+        This page is best opened on your iPhone or iPad to install via TestFlight.
+      </div>
+      <article class="tf-step-card">
+        <div class="tf-step-head">
+          <span class="tf-step-num">1</span>
+          <h5 class="tf-step-title">Install TestFlight</h5>
+        </div>
+        <p>Open the App Store on your device and install Apple’s <strong>TestFlight</strong> app (if you don’t have it
+          yet).</p>
+        <p>When you're on your iOS device, first install TestFlight from the App Store (if needed), then tap the
+          invitation button below to open TestFlight:</p>
+        <div class="tf-actions">
+          <a class="store-btn-app waves-effect" href="https://apps.apple.com/us/app/testflight/id899247664?mt=8"
+            target="_blank" rel="noopener">
+            Get TestFlight on the App&nbsp;Store
+          </a>
+        </div>
+      </article>
+      <article class="tf-step-card">
+        <div class="tf-step-head">
+          <span class="tf-step-num">2</span>
+          <h5 class="tf-step-title">Important</h5>
+        </div>
+        <div class="tf-callout">
+          Ignore TestFlight's request to send your email to the developer to invite for internal testing. You do not
+          need to do this (if you do, you will need to wait for our invitation link which will take time for us to send
+          it to you). Once you have TestFlight, you can directly proceed to downloading the app (Step 3). Enjoy!
+        </div>
+      </article>
+      <article class="tf-step-card">
+        <div class="tf-step-head">
+          <span class="tf-step-num">3</span>
+          <h5 class="tf-step-title">Install the app!</h5>
+        </div>
+        <p>Tap the button below to open TestFlight and install the app. We hope you enjoy and leave feedback!</p>
+        <div class="tf-actions">
+          <a id="deepLink" class="store-btn waves-effect" href="itms-beta://testflight.apple.com/join/4M4bxy3Y">
+            Open in TestFlight
+          </a>
+          <a id="fallbackLink" class="store-btn--outline waves-effect" href="https://testflight.apple.com/join/4M4bxy3Y"
+            target="_blank" rel="noopener">
+            Open Public Install Page
+          </a>
+        </div>
+        <p class="grey-text text-darken-1 center" style="margin:.6rem 0 0">
+          Having trouble? Use the public install page and choose <em>Start Testing</em>.
+        </p>
+      </article>
+
+    </div>
+  </section>
+  <footer id="footer" class="footer-teal">
+    <div class="container">
+      <div class="row" style="margin-bottom:0">
+        <div class="col s12 m6">
+          <h5>Retire Abroad LLC</h5>
+          <p>
+            94 Downer Forest Rd<br>
+            South Strafford, VT 05070<br>
+            United States
+          </p>
+        </div>
+        <div class="col s12 m6">
+          <h5>Contact Us</h5>
+          <p>Email: <a href="mailto:info@retireabroad.info" class="mail-link">info@retireabroad.info</a></p>
+          <p><a class="footer-link" href="feedback.html">Feedback</a> | <a class="footer-link" href="tos.html">Terms of
+              Service</a></p>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2025 <strong>Retire Abroad LLC</strong> · ReThaiRe is operated by Retire Abroad LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.M) M.Sidenav.init(document.querySelectorAll('.sidenav'));
+    });
+    (function () {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      const isiOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const deviceNote = document.getElementById('deviceNote');
+      if (!isiOS && deviceNote) deviceNote.style.display = 'block';
+    })();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

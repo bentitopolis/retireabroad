@@ -1,12 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=/rethaire/index.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReThaiRe — Retire Abroad</title>
+
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Theme color -->
+  <meta name="theme-color" content="#157f83">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-<p>If you are not redirected automatically, <a href="/rethaire/index.html">click here</a>.</p>
+
+  <!-- NAVBAR & HEADER -->
+  <nav class="nav-hero">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html#home" class="brand-logo brand-text">Retire Abroad</a>
+
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Open menu">
+          <i class="material-icons">
+            <img class="icon-menu" src="assets/icons/menu.svg" alt="">
+          </i>
+        </a>
+
+        <ul class="nav-right">
+          <li><a href="index.html#home" class="nav-link">Home</a></li>
+          <li><a href="index.html#features" class="nav-link">Features</a></li>
+          <li><a href="about-us.html" class="nav-link">About us</a></li>
+          <li><a href="index.html#download" class="nav-link nav-download">Download</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="about-us.html">About us</a></li>
+    <li><a href="index.html#download">Download</a></li>
+  </ul>
+
+  <header id="home" class="hero">
+    <div class="hero__content">
+      <div class="container">
+        <p class="hero__kicker">From Retire Abroad: Introducing our app for Thailand</p>
+        <h1 class="hero__title">Plan your retirement<br />with ReThaiRe App</h1>
+
+        <div class="store-badges">
+          <a class="store-btn" href="ios_testflight.html">
+            <img class="btn-icon" src="assets/icons/apple.svg" alt="">
+            Download Apple Store
+          </a>
+          <a class="store-btn" href="https://play.google.com/apps/testing/info.retireabroad">
+            <img class="btn-icon" src="assets/icons/google.svg" alt="">
+            Download Google Play
+          </a>
+        </div>
+        <div class="hero_bottom">
+          <p class="hero_links">
+            <a href="feedback.html">Give us feedback here</a>
+            <span class="sep">•</span>
+            <a href="tos.html">Terms of Service</a>
+            <span class="sep">•</span>
+            <a href="privacy_policy.html">Privacy Policy</a>
+            <span class="sep">•</span>
+            <a href="data_deletion.html">Data Deletion Policy</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">FEATURES</h2>
+
+      <div class="row">
+        <div class="col s12 m4 features-icons left">
+          <div class="valign-wrapper feature-row">
+            <span class="icon-pill"><img class="icon-img" src="assets/icons/calculator.svg" alt=""></span>
+            <div>
+              <h6 class="feature-title">Budget<br />Calculator</h6>
+              <p class="feature-desc">Project living costs in THB/USD/ EUR with inflation and exchange rates</p>
+            </div>
+          </div>
+
+          <div class="valign-wrapper feature-row">
+            <span class="icon-pill"><img class="icon-img" src="assets/icons/events.svg" alt=""></span>
+            <div>
+              <h6 class="feature-title">Events &amp;<br />Festival</h6>
+              <p class="feature-desc">Find events and festivals happening in Thailand</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4 phone-wrap">
+          <img class="phone" src="assets/images/phone-feature.svg" alt="ReThaiRe app feature preview">
+        </div>
+
+        <div class="col s12 m4 features-icons right">
+          <div class="valign-wrapper feature-row">
+            <span class="icon-pill"><img class="icon-img" src="assets/icons/trip.svg" alt=""></span>
+            <div>
+              <h6 class="feature-title">Trip<br />Planner</h6>
+              <p class="feature-desc">Build your trip in minutes with intelligent planning</p>
+            </div>
+          </div>
+
+          <div class="valign-wrapper feature-row">
+            <span class="icon-pill"><img class="icon-img" src="assets/icons/deals.svg" alt=""></span>
+            <div>
+              <h6 class="feature-title">Best deals<br />in Thailand</h6>
+              <p class="feature-desc">Discover exclusive, pre-screened offers that cut your travel costs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA (download) -->
+  <section id="download" class="section cta">
+    <div class="container center">
+      <img class="app-icon" src="assets/images/rethaire-icon.svg" alt="ReThaiRe app icon">
+
+      <h5 class="section-title cta-title">Your Thailand retirement starts here!</h5>
+      <p class="grey-text text-darken-1 cta-sub">Download the app and build your retirement plan for Thailand</p>
+
+      <div class="row cta-buttons">
+        <a class="store-btn" href="ios_testflight.html">
+          <img class="btn-icon" src="assets/icons/apple.svg" alt="">
+          Download Apple Store
+        </a>
+        <a class="store-btn" href="https://play.google.com/apps/testing/info.retireabroad">
+          <img class="btn-icon" src="assets/icons/google.svg" alt="">
+          Download Google Play
+        </a>
+      </div>
+
+      <p class="store-subcopy">ReThaiRe — the first app from <strong>Retire Abroad</strong>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer-teal">
+    <div class="container">
+      <div class="row" style="margin-bottom:0">
+        <div class="col s12 m6">
+          <h5>Retire Abroad LLC</h5>
+          <p>
+            94 Downer Forest Rd<br>
+            South Strafford, VT 05070<br>
+            United States
+          </p>
+        </div>
+        <div class="col s12 m6">
+          <h5>Contact Us</h5>
+          <p>Email: <a href="mailto:info@retireabroad.info">info@retireabroad.info</a></p>
+          <p><a class="footer-link" href="feedback.html">Feedback</a> | <a class="footer-link" href="tos.html">Terms of
+              Service</a></p>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2025 <strong>Retire Abroad LLC</strong> · ReThaiRe is operated by Retire Abroad LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sidenavs = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(sidenavs);
+    });
+  </script>
 </body>
+
 </html>
