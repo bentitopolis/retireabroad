@@ -200,6 +200,24 @@
     </div>
   </footer>
 
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCUHdjd9J1pa6mEytX_b2yq89TFvFj8k-s",
+      authDomain: "turing-mark-445020-k1.firebaseapp.com",
+      projectId: "turing-mark-445020-k1",
+      storageBucket: "turing-mark-445020-k1.firebasestorage.app",
+      messagingSenderId: "551955609502",
+      appId: "1:551955609502:web:cc20feee804bb1dae3488f",
+    };
+
+    // inicialize Firebase and Firestore
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
   <!-- Materialize + form -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
@@ -224,28 +242,28 @@
         btn.disabled = true;
         bar.style.display = 'block';
 
+        const email = document.getElementById('email').value.trim();
+        const feedback = document.getElementById('feedback').value.trim();
+
         const payload = {
-          key: '1',
-          email: document.getElementById('email').value.trim(),
-          message: document.getElementById('feedback').value.trim()
+          email: email,
+          feedback: feedback,
+          source: 'web-feedback',
+          createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         };
 
         try {
-          const res = await fetch('https://www.jwpro.info/retire-abroad-emails', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
+          await db.collection('retireabroad_web_feedback').add(payload);
 
-          if (res.ok) {
-            M.toast({ html: 'Thanks for your feedback! 🙏' });
-            form.reset();
-            setTimeout(() => { window.location.href = 'thank_you.html'; }, 700);
-          } else {
-            M.toast({ html: 'Something went wrong. Please try again.' });
-          }
+          M.toast({ html: 'Thanks for your feedback! 🙏' });
+          form.reset();
+
+          setTimeout(() => {
+            window.location.href = 'thank_you.html';
+          }, 700);
         } catch (err) {
-          M.toast({ html: 'Network error. Please try again.' });
+          console.error('Firestore error:', err);
+          M.toast({ html: 'Something went wrong. Please try again.' });
         } finally {
           btn.disabled = false;
           bar.style.display = 'none';
