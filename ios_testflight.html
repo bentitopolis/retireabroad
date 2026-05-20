@@ -5,6 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Download App for iOS — TestFlight Instructions</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="canonical" href="https://www.retireabroad.info/ios_testflight.html">
@@ -12,36 +17,10 @@
 </head>
 
 <body>
-  <nav class="nav-hero">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="/#home" class="brand-logo brand-text">Retire Abroad</a>
+  <div id="global-header"></div>
 
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Open menu">
-          <i class="material-icons">
-            <img class="icon-menu" src="assets/icons/menu.svg" alt="">
-          </i>
-        </a>
 
-        <ul class="nav-right">
-          <li><a href="/#home" class="nav-link">Home</a></li>
-          <li><a href="/#features" class="nav-link">Features</a></li>
-          <li><a href="/#blog" class="nav-link">Blog</a></li>
-          <li><a href="about-us.html" class="nav-link">About us</a></li>
-          <li><a href="/#download" class="nav-link nav-download">Download</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <ul class="sidenav" id="mobile-nav">
-    <li><a href="/#home">Home</a></li>
-    <li><a href="/#features">Features</a></li>
-    <li><a href="/#blog">Blog</a></li>
-    <li><a href="about-us.html">About us</a></li>
-    <li><a href="/#download">Download</a></li>
-  </ul>
-  <header class="hero hero--short">
+  <header class="hero hero--short pt-32">
     <div class="hero__content">
       <div class="container tf-hero">
         <h1 class="tf-hero-title">Download ReThaiRe for iOS</h1>
@@ -97,36 +76,14 @@
             Open Public Install Page
           </a>
         </div>
-        <p class="grey-text text-darken-1 center" style="margin:.6rem 0 0">
+        <p class="grey-text text-darken-1 center" class="mt-[.6rem]">
           Having trouble? Use the public install page and choose <em>Start Testing</em>.
         </p>
       </article>
 
     </div>
   </section>
-  <footer id="footer" class="footer-teal">
-    <div class="container">
-      <div class="row" style="margin-bottom:0">
-        <div class="col s12 m6">
-          <h5>Retire Abroad LLC</h5>
-          <p>
-            94 Downer Forest Rd<br>
-            South Strafford, VT 05070<br>
-            United States
-          </p>
-        </div>
-        <div class="col s12 m6">
-          <h5>Contact Us</h5>
-          <p>Email: <a href="mailto:info@retireabroad.info" class="mail-link">info@retireabroad.info</a></p>
-          <p><a class="footer-link" href="feedback.html">Feedback</a> | <a class="footer-link" href="tos.html">Terms of
-              Service</a></p>
-        </div>
-      </div>
-      <div class="footer-legal">
-        <p>© 2025 <strong>Retire Abroad LLC</strong> · ReThaiRe is operated by Retire Abroad LLC.</p>
-      </div>
-    </div>
-  </footer>
+  <div id="global-footer"></div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -140,6 +97,7 @@
     })();
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

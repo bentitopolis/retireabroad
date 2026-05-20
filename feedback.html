@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feedback — ReThaiRe</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+
   <!-- Materialize -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="canonical" href="https://www.retireabroad.info/feedback.html">
   <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -39,7 +43,7 @@
     fbq('init', '25359736126997747');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
+  <noscript><img height="1" width="1" class="hidden"
       src="https://www.facebook.com/tr?id=25359736126997747&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <style>
@@ -51,7 +55,7 @@
     body {
       margin: 0;
       flex-direction: column;
-      min-height: 100svh;
+      min-height: 100vh;
     }
 
     main {
@@ -63,8 +67,7 @@
     }
 
     .feedback-hero {
-      background: #fff;
-      padding: 24px 0 8px;
+      padding-top: 100px;
       text-align: center;
     }
 
@@ -78,12 +81,12 @@
       max-width: 100%;
       margin: 24px auto 0;
       padding: 0 16px;
+      font-size: 28px;
     }
 
     .card-feedback {
-      border-radius: 12px;
-      padding: 20px 20px 8px;
-      background: #fff;
+      border-radius: 20px;
+      padding: 20px 8px;
     }
 
     .btn-cta {
@@ -91,10 +94,11 @@
       border-radius: 8px;
       font-weight: 800;
       text-transform: none;
+      margin-top: 20px;
     }
 
     .btn-cta:hover {
-      filter: brightness(.95);
+      filter: brightness(.90);
     }
 
     .helper {
@@ -137,35 +141,10 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- HEADER  -->
-  <nav class="nav-hero">
-    <div class="container">
-      <div class="nav-inner">
-        <a href="/#home" class="brand-logo brand-text">Retire Abroad</a>
+  <div id="global-header"></div>
 
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger" aria-label="Open menu">
-          <i class="material-icons">
-            <img class="icon-menu" src="assets/icons/menu.svg" alt="">
-          </i>
-        </a>
 
-        <ul class="nav-right">
-          <li><a href="/#home" class="nav-link">Home</a></li>
-          <li><a href="/#features" class="nav-link">Features</a></li>
-          <li><a href="/#blog" class="nav-link">Blog</a></li>
-          <li><a href="about-us.html" class="nav-link">About us</a></li>
-          <li><a href="/#download" class="nav-link nav-download">Download</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <ul class="sidenav" id="mobile-nav">
-    <li><a href="/#home">Home</a></li>
-    <li><a href="/#features">Features</a></li>
-    <li><a href="/#blog">Blog</a></li>
-    <li><a href="about-us.html">About us</a></li>
-    <li><a href="/#download">Download</a></li>
-  </ul>
 
   <!-- title -->
   <section class="feedback-hero">
@@ -179,8 +158,8 @@
     </div>
     <div class="card-feedback">
       <form id="feedback-form" class="feedback-form" novalidate>
-        <input type="text" name="company" id="company" autocomplete="off" style="position:absolute;left:-9999px;"
-          tabindex="-1" aria-hidden="true">
+        <input type="text" name="company" id="company" autocomplete="off" class="absolute -left-[9999px]" tabindex="-1"
+          aria-hidden="true">
 
         <div class="input-field">
           <input id="email" name="email" type="email" class="validate" required aria-required="true"
@@ -200,11 +179,11 @@
           <a href="privacy_policy.html" target="_blank" rel="noopener">Privacy Policy</a>.
         </p>
 
-        <div class="center" style="margin-top:10px">
+        <div class="center" class="mt-4">
           <button id="submit-btn" class="btn btn-cta waves-effect">Submit</button>
         </div>
 
-        <div id="submit-progress" class="progress" style="display:none">
+        <div id="submit-progress" class="progress" class="hidden" style="display:none">
           <div class="indeterminate"></div>
         </div>
       </form>
@@ -212,27 +191,8 @@
   </main>
 
   <!-- FOOTER  -->
-  <footer id="footer" class="footer-teal" style="margin-top:28px">
-    <div class="container">
-      <div class="row" style="margin-bottom:0">
-        <div class="col s12 m6">
-          <h5>Retire Abroad LLC</h5>
-          <p>
-            94 Downer Forest Rd<br>
-            South Strafford, VT 05070<br>
-            United States
-          </p>
-        </div>
-        <div class="col s12 m6">
-          <h5>Contact</h5>
-          <p>Email: <a href="mailto:info@retireabroad.info" class="mail-link">info@retireabroad.info</a></p>
-        </div>
-      </div>
-      <div class="footer-legal">
-        <p>© 2025 <strong>Retire Abroad LLC</strong> · ReThaiRe is operated by Retire Abroad LLC.</p>
-      </div>
-    </div>
-  </footer>
+  <div id="global-footer"></div>
+
 
   <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
@@ -305,6 +265,7 @@
       });
     });
   </script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
