@@ -144,8 +144,6 @@
   <div id="global-header"></div>
 
 
-
-
   <!-- title -->
   <section class="feedback-hero">
 
@@ -193,79 +191,12 @@
   <!-- FOOTER  -->
   <div id="global-footer"></div>
 
-
   <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
-
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyCUHdjd9J1pa6mEytX_b2yq89TFvFj8k-s",
-      authDomain: "turing-mark-445020-k1.firebaseapp.com",
-      projectId: "turing-mark-445020-k1",
-      storageBucket: "turing-mark-445020-k1.firebasestorage.app",
-      messagingSenderId: "551955609502",
-      appId: "1:551955609502:web:cc20feee804bb1dae3488f",
-    };
-
-    // inicialize Firebase and Firestore
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-  </script>
   <!-- Materialize + form -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      M.Sidenav.init(document.querySelectorAll('.sidenav'));
-      M.CharacterCounter.init(document.querySelectorAll('#feedback'));
-
-      const form = document.getElementById('feedback-form');
-      const btn = document.getElementById('submit-btn');
-      const bar = document.getElementById('submit-progress');
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        if (!form.checkValidity()) {
-          M.toast({ html: 'Please fill in the required fields.' });
-          return;
-        }
-        // honeypot
-        if (document.getElementById('company').value) return;
-
-        btn.disabled = true;
-        bar.style.display = 'block';
-
-        const email = document.getElementById('email').value.trim();
-        const feedback = document.getElementById('feedback').value.trim();
-
-        const payload = {
-          email: email,
-          feedback: feedback,
-          source: 'web-feedback',
-          createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-        };
-
-        try {
-          await db.collection('retireabroad_web_feedback').add(payload);
-
-          M.toast({ html: 'Thanks for your feedback! 🙏' });
-          form.reset();
-
-          setTimeout(() => {
-            window.location.href = 'thank_you.html';
-          }, 700);
-        } catch (err) {
-          console.error('Firestore error:', err);
-          M.toast({ html: 'Something went wrong. Please try again.' });
-        } finally {
-          btn.disabled = false;
-          bar.style.display = 'none';
-        }
-      });
-    });
-  </script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

@@ -238,47 +238,9 @@
   </section>
   <!-- FOOTER -->
   <div id="global-footer"></div>
-  <!-- Materialize init removed -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    let currentSlide = 0;
-    const totalSlides = 6;
-    const screenshots = [
-      'assets/images/screenshots/events.png',
-      'assets/images/screenshots/visa-tracker-1.png',
-      'assets/images/screenshots/planner.png',
-      'assets/images/screenshots/provinces.png',
-      'assets/images/screenshots/itinerary.png',
-      'assets/images/screenshots/living.png'
-    ];
-
-    function changeSlide(direction) {
-      // Hide current text slide
-      document.getElementById(`slide-${currentSlide}`).classList.remove('active');
-
-      // Calculate next index
-      currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-
-      // Show next text slide
-      document.getElementById(`slide-${currentSlide}`).classList.add('active');
-
-      // Update Image with a simple fade
-      const imgElement = document.getElementById('current-img');
-      imgElement.style.opacity = 0;
-
-      setTimeout(() => {
-        imgElement.src = screenshots[currentSlide];
-        imgElement.style.opacity = 1;
-      }, 200);
-    }
-  </script>
-  <script src="assets/js/main.js"></script>
   <a href="https://line.me/R/ti/p/@514rhfyb" target="_blank" rel="noopener noreferrer"
     class="fixed bottom-6 right-6 z-50 flex items-center justify-center hover:-translate-y-1 hover:scale-110 transition-all duration-300 drop-shadow-2xl"
     aria-label="Contact us on LINE">
-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 56" class="w-20 h-20">
       <g transform="matrix(1.25,0,0,-1.25,0,56)">
         <path fill="#00C300"
@@ -286,6 +248,14 @@
       </g>
     </svg>
   </a>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
