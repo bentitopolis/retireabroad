@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deal Store Partner - ReThaiRe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              green: '#507C7E',
+              orange: '#EE9F43',
+              orangeHover: '#d98b36',
+              greenDark: '#406365'
+            }
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+            'card': '0 10px 30px -5px rgba(0, 0, 0, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-brand-orange selection:text-white">
+
+  <!-- Header / Navbar -->
+  <header class="absolute w-full top-0 z-50 pt-8 md:pt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative flex items-center h-24">
+        <!-- Center Logo (absolute on md+, normal flex on mobile to avoid overlap if small screen) -->
+        <div class="flex-1 flex md:absolute md:inset-x-0 md:justify-center items-center pointer-events-none">
+          <a href="/" class="flex items-center group pointer-events-auto">
+            <img class="h-20 md:h-24 w-auto object-contain group-hover:scale-105 transition-transform"
+              src="assets/images/rethaire-icon.svg" alt="ReThaiRe Logo">
+          </a>
+        </div>
+
+        <!-- Right CTA & Language Switcher -->
+        <div class="ml-auto relative z-10 flex items-center gap-4 sm:gap-6">
+          <!-- Language Switcher -->
+          <div
+            class="flex items-center text-sm font-semibold text-gray-600 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm border border-gray-200">
+            <a href="/deal-store.html" class="hover:text-brand-green transition-colors">EN</a>
+            <span class="mx-2 text-gray-300">|</span>
+            <a href="/th-deal-store.html" class="text-brand-green">TH</a>
+          </div>
+
+          <a href="#register"
+            class="bg-brand-orange hover:bg-brand-orangeHover text-white px-4 sm:px-6 py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            เข้าถึงลูกค้าต่างชาติเลย
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+        <div class="lg:col-span-6 text-center lg:text-left mb-16 lg:mb-0">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-normal mb-6 tracking-tight">
+            ดึงดูดลูกค้าชาวต่างชาติ <span
+              class="text-brand-green leading-relaxed text-5xl">ให้มาที่ร้านของคุณ</span><br />
+            โดยตรง
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            เข้าร่วม ReThaiRe Deal Store มอบส่วนลดหน้าร้านขั้นต่ำ 5%
+            และดึงดูดชุมชนชาวต่างชาติที่มีกำลังซื้อสูงในประเทศไทย
+            การตลาดที่เน้นผลลัพธ์—คุณจะให้ส่วนลดก็ต่อเมื่อเกิดการซื้อขายจริงหน้าร้านเท่านั้น
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="https://line.me/R/ti/p/@514rhfyb"
+              class="bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              ลงทะเบียนผ่าน LINE
+            </a>
+            <a href="#how-it-works"
+              class="bg-white border-2 border-gray-200 text-gray-700 hover:border-gray-300 hover:bg-gray-50 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-sm hover:shadow-md">วิธีการทำงาน</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <!-- Decorative elements behind image -->
+          <div
+            class="absolute -top-10 -right-10 w-40 h-40 bg-brand-green rounded-full mix-blend-multiply filter blur-3xl opacity-20">
+          </div>
+          <div
+            class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-orange rounded-full mix-blend-multiply filter blur-3xl opacity-20">
+          </div>
+
+          <div class="relativeflex items-center justify-center">
+            <!-- Placeholder for 3D illustration -->
+            <div class="text-center p-8">
+              <img src="assets/images/banner-deals.png" class="w-full object-cover"
+                alt="deals screen and rethaire screen">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">ทำไมถึงควรเป็นพาร์ทเนอร์กับ Deal
+          Store?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Card 1 -->
+        <div
+          class="bg-gray-50 rounded-3xl p-8 shadow-soft border border-gray-100 hover:shadow-card transition-all transform hover:-translate-y-1">
+          <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">สแกน ตรวจสอบ และเพิ่มยอดขาย</h3>
+          <p class="text-gray-600 leading-relaxed">
+            เทคโนโลยีคิวอาร์โค้ดแบบไดนามิกของเราช่วยให้คุณควบคุมได้ทั้งหมด เมื่อสมาชิก ReThaiRe ต้องการใช้ส่วนลด
+            พวกเขาจะแสดงคิวอาร์โค้ดบนมือถือ คุณเพียงแค่สแกนเพื่อตรวจสอบสิทธิ์ในไม่กี่วินาที และปิดการขายได้อย่างปลอดภัย
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-gray-50 rounded-3xl p-8 shadow-soft border border-gray-100 hover:shadow-card transition-all transform hover:-translate-y-1">
+          <div class="w-14 h-14 bg-brand-orange/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-brand-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">รับประกันยอดขายหน้าร้านจริง</h3>
+          <p class="text-gray-600 leading-relaxed">
+            เราเชื่อมโยงการค้นหาออนไลน์กับการเดินทางมาที่ร้านจริงๆ การลงทุนทางการตลาดของคุณจะขึ้นอยู่กับผลลัพธ์เท่านั้น
+            คุณจะให้ส่วนลดเมื่อลูกค้ามายืนอยู่หน้าเคาน์เตอร์และพร้อมจ่ายเงินแล้วเท่านั้น
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-gray-50 rounded-3xl p-8 shadow-soft border border-gray-100 hover:shadow-card transition-all transform hover:-translate-y-1">
+          <div class="w-14 h-14 bg-brand-green/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-brand-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">กลุ่มลูกค้าชาวต่างชาติที่มีกำลังซื้อสูง</h3>
+          <p class="text-gray-600 leading-relaxed">
+            ผู้ใช้ของเราไม่ใช่นักท่องเที่ยวทั่วไป แต่เป็นชาวต่างชาติที่พำนักระยะยาว คนทำงานทางไกล และกลุ่ม FIRE
+            ที่กำลังสร้างชีวิตในประเทศไทย พวกเขามีความภักดีต่อแบรนด์ มีกำลังซื้อสูง
+            และมองหาพาร์ทเนอร์ท้องถิ่นที่เชื่อถือได้
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works Section -->
+  <section id="how-it-works" class="py-20 lg:py-28 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">วิธีการทำงาน</h2>
+      </div>
+
+      <div class="relative">
+        <!-- Connecting Line -->
+        <div class="hidden md:block absolute left-8 top-10 bottom-10 w-0.5 bg-gray-200 z-0"></div>
+
+        <div class="space-y-16">
+          <!-- Step 1 -->
+          <div class="relative flex flex-col md:flex-row gap-6 md:gap-12 z-10 items-start">
+            <div class="md:w-16 flex-shrink-0 flex items-start justify-start">
+              <div
+                class="w-16 h-16 rounded-full bg-brand-green text-white flex items-center justify-center text-2xl font-bold ring-4 ring-gray-50">
+                1
+              </div>
+            </div>
+            <div class="flex-1 pt-3">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">ตั้งค่าผ่าน LINE ในไม่กี่นาที</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                เพิ่มเพื่อนผ่าน LINE Official Account ของเรา ส่งข้อมูลธุรกิจ และตั้งค่าส่วนลดขั้นต่ำ 5%
+                ร้านของคุณจะไปอยู่บนแอปพลิเคชัน ReThaiRe ทันที
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative flex flex-col md:flex-row gap-6 md:gap-12 z-10 items-start">
+            <div class="md:w-16 flex-shrink-0 flex items-start justify-start">
+              <div
+                class="w-16 h-16 rounded-full bg-brand-orange text-white flex items-center justify-center text-2xl font-bold ring-4 ring-gray-50">
+                2
+              </div>
+            </div>
+            <div class="flex-1 pt-3">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">ต้อนรับสมาชิก ReThaiRe</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                ชาวต่างชาติจะเห็นข้อเสนอของคุณในแอปและเดินทางมาที่ร้าน เมื่อถึงเวลาชำระเงิน
+                พวกเขาจะแสดงคิวอาร์โค้ดบนหน้าจอมือถือ
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative flex flex-col md:flex-row gap-6 md:gap-12 z-10 items-start">
+            <div class="md:w-16 flex-shrink-0 flex items-start justify-start">
+              <div
+                class="w-16 h-16 rounded-full bg-brand-green text-white flex items-center justify-center text-2xl font-bold ring-4 ring-gray-50">
+                3
+              </div>
+            </div>
+            <div class="flex-1 pt-3">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">สแกนเพื่อรับสิทธิ์</h3>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                ใช้กล้องสมาร์ทโฟนทั่วไปสแกนหน้าจอลูกค้า ระบบจะตรวจสอบโค้ดทันที คุณมอบส่วนลด และได้ลูกค้าประจำคนใหม่
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Qualification Section -->
+  <section id="qualification" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+          ธุรกิจของคุณเหมาะกับชุมชนชาวต่างชาติของเราหรือไม่?</h2>
+        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+          ReThaiRe Deal Store ออกแบบมาเพื่อไลฟ์สไตล์ สุขภาพ และประสบการณ์ท้องถิ่นในชีวิตประจำวัน เพื่อรักษาคุณภาพ
+          พาร์ทเนอร์ทั้งหมดจะผ่านขั้นตอนการอนุมัติอย่างรวดเร็ว
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <!-- Positive Criteria -->
+        <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm">
+          <h3 class="text-2xl font-bold text-brand-green mb-8 flex items-center">
+            <span class="mr-3 text-2xl">✅</span> เรากำลังมองหา:
+          </h3>
+          <ul class="space-y-5">
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-brand-green mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-800 text-lg font-medium">ร้านอาหาร คาเฟ่ และบาร์</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-brand-green mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-800 text-lg font-medium">คลินิก ทันตกรรม และสุขภาพ</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-brand-green mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-800 text-lg font-medium">สปา ซาลอน และฟิตเนส</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-brand-green mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-800 text-lg font-medium">ร้านค้าปลีกและบริการทั่วไป</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-brand-green mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-800 text-lg font-medium">ทัวร์และประสบการณ์ท้องถิ่น</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-brand-green mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-800 text-lg font-medium">ประกันสุขภาพ อสังหาริมทรัพย์ และวีซ่า</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Negative Criteria -->
+        <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-sm opacity-80">
+          <h3 class="text-2xl font-bold text-gray-700 mb-8 flex items-center">
+            <span class="mr-3 text-2xl">❌</span> ธุรกิจที่ไม่เข้าร่วม:
+          </h3>
+          <ul class="space-y-5">
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-gray-400 mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-gray-600 text-lg">การขายที่ดิน</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-gray-400 mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-gray-600 text-lg">การลงทุนที่มีความเสี่ยงสูง</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-gray-400 mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-gray-600 text-lg">บริการอุตสาหกรรมแบบ B2B</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="h-6 w-6 text-gray-400 mr-4 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span class="text-gray-600 text-lg">ธุรกิจที่ไม่ได้รับการยืนยัน/ไม่มีใบอนุญาต</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="register" class="py-20 lg:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 bg-brand-green"></div>
+    <div
+      class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent">
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-8 tracking-tight leading-[1.4]">
+        พร้อมที่จะเป็นพาร์ทเนอร์ที่ได้รับการอนุมัติจาก Deal Store แล้วหรือยัง?
+      </h2>
+      <a href="https://line.me/R/ti/p/@514rhfyb"
+        class="inline-block bg-brand-orange hover:bg-brand-orangeHover text-white px-10 py-5 rounded-full font-bold text-xl transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+        สมัครเลยผ่าน LINE
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#F5EDE0] py-12 text-center text-brand-green">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <img class="h-14 md:h-16 w-auto" src="assets/images/rethaire-icon.svg" alt="ReThaiRe Logo">
+        <span class="font-extrabold text-2xl text-brand-green tracking-tight">ReThaiRe</span>
+      </div>
+      <p class="font-medium text-brand-greenDark">&copy; 2026 Retire Abroad LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
